@@ -1,0 +1,36 @@
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #08003a;
+  color: white;
+  font-size: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  .main-text h1 {
+    font-size: 28px;
+  }
+  .nav-part {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .Navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+}
