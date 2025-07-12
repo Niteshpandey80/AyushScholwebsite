@@ -4,7 +4,7 @@ import left_div from '../../assets/left-div1.png';
 
 const Page1 = () => {
   return (
-    <div className='page1'>
+    <div className='page1' id="about">
       <div className='text'>
         <p>WHAT WE OFFER</p>
         <h1>Primary With Upper Primary</h1>

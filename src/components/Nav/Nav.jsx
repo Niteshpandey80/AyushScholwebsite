@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Nav.css';
 import logo from '../../assets/Logo.png';
 
@@ -11,7 +12,7 @@ const Nav = () => {
     <nav className='navbar'>
       <div className='navbar-container'>
         <img src={logo} alt='Logo' className='navbar-logo' />
-        
+
         <button 
           className={`navbar-toggle ${isOpen ? 'active' : ''}`} 
           onClick={toggleMenu}
@@ -26,7 +27,7 @@ const Nav = () => {
           <a href="#home" className='navbar-item'>HOME</a>
           <a href="#about" className='navbar-item'>ABOUT</a>
           <a href="#contact" className='navbar-item'>CONTACT</a>
-          <button className='navbar-button'>Contact Us</button>
+          <a href="#contact"><button className='navbar-button'>Contact Us</button></a>
         </div>
       </div>
     </nav>
