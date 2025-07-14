@@ -4,14 +4,13 @@
   background: linear-gradient(rgba(8, 0, 58, 0.7), rgba(8, 0, 58, 0.7)),
     url('../../assets/newIntro.jpg');
   background-size: cover;
+  font-family: Gilroy;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   animation: fadeIn 1s ease-out;
 }
-
-
 .main-text {
   color: white;
   font-size: 2rem;
@@ -23,7 +22,7 @@
 }
 
 .main-text h1 {
-  font-weight: 700;
+  font-weight: 600;
   text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
@@ -48,50 +47,151 @@
   background-color: #ffc107; /* Yellow */
   border-radius: 2px;
 }
-
 .btn {
-  padding: 10px 15px; /* Reduced padding for narrower width */
-  background: #ffcc00;
-  color: black;
-  font-weight: bold;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #ffcc00, #ffdb4d);
+  color: #000;
+  font-weight: 600;
+  font-family: 'Segoe UI', sans-serif;
   border: none;
-  border-radius: 30px;
+  border-radius: 50px;
   cursor: pointer;
   font-size: 16px;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  min-width: 120px; /* Ensures button doesn't get too small */
-  margin: 0 auto; /* Centers the narrower button */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  min-width: 140px;
+  margin: 10px auto;
+  display: inline-block;
+  text-align: center;
+  z-index: 1;
 }
 
 .btn:hover {
-  background: #ffd633;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  background: linear-gradient(135deg, #ffd633, #ffe066);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  animation: pulse 1.5s infinite;
 }
 
 .btn:active {
-  transform: translateY(0);
+  transform: scale(0.98);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.arrow-icon {
+  display: inline-block;
+  margin-left: 8px;
+  animation: bounce 1.5s infinite;
+  transition: transform 0.3s ease;
+  font-size: 18px;
+}
+
+/* Optional hover effect */
+.btn:hover .arrow-icon {
+  transform: translateY(3px) rotate(10deg);
+}
+
+/* Bouncing arrow animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0));
+  border-radius: 50px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  opacity: 1;
 }
 
 .btn::after {
   content: '';
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: -75%;
+  width: 50%;
   height: 100%;
-  background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0));
-  opacity: 0;
-  transition: opacity 0.3s;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-25deg);
+  transition: left 0.6s ease;
 }
 
 .btn:hover::after {
-  opacity: 1;
+  left: 125%;
 }
 
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 204, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 204, 0, 0);
+  }
+}
+
+/* Add this class for continuous floating animation */
+.btn.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Ripple effect on click */
+.btn.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn.ripple:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform .5s, opacity 1s;
+}
+
+.btn.ripple:active:after {
+  transform: scale(0, 0);
+  opacity: .3;
+  transition: 0s;
+}
 /* Animations */
 @keyframes fadeIn {
   from { opacity: 0; }

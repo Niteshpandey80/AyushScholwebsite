@@ -11,7 +11,9 @@ const Nav = () => {
   return (
     <nav className='navbar'>
       <div className='navbar-container'>
-        <img src={logo} alt='Logo' className='navbar-logo' />
+        <a href="#home">
+          <img src={logo} alt='Logo' className='navbar-logo' />
+        </a>
 
         <button 
           className={`navbar-toggle ${isOpen ? 'active' : ''}`} 
@@ -27,8 +29,9 @@ const Nav = () => {
           <a href="#home" className='navbar-item'>HOME</a>
           <a href="#about" className='navbar-item'>ABOUT</a>
           <a href="#contact" className='navbar-item'>CONTACT</a>
-          <a href="#contact"><button className='navbar-button'>Contact Us</button></a>
-        </div>
+            <a href="/details.pdf" target="_blank" rel="noopener noreferrer">
+  <button className='navbar-button'>Details</button>
+</a> </div>
       </div>
     </nav>
   );
