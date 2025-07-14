@@ -6,7 +6,8 @@ import Footer from './components/Footer/Footer'
 import Page2 from './components/Page2/Page2';
 import Contact from './components/Contact/Contact';
 import Introduction from './components/Introduction/Introduction';
-import ComputerLab from './components/ComputerLab/ComputerLab';
+import Computer from './components/Computer/Computer';
+
 
 
 const App = () => {
@@ -15,7 +16,7 @@ const App = () => {
       <Nav />
       <Main />
       <Page1 />
-      <ComputerLab/>
+      <Computer/>
       <Introduction/>
       <Page2/>
       <Contact/>

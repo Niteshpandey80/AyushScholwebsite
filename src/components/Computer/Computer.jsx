@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 import img1 from '../../assets/compp.jpg';
 import img2 from '../../assets/complab.jpg';
 import playg from '../../assets/playground.jpg';
-import './ComputerLab.css';
+import './Computer.css';
 
-const ComputerLab = () => {
+const Computer = () => {
   return (
-    <div className="computer-lab-wrapper">
+      <div className="computer-lab-wrapper">
       <h1 className="computer-lab-heading">Holistic Development</h1>
       <span className="heading-underline" />
       
@@ -36,7 +36,7 @@ const ComputerLab = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ComputerLab;
+export default Computer
