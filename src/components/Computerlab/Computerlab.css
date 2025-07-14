@@ -1,0 +1,115 @@
+.computer-lab-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.computer-lab-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0d3b66;
+  margin-bottom: 10px;
+  text-align: center;
+  position: relative;
+}
+
+/* Animated Yellow Underline */
+.heading-underline {
+  width: 120px;
+  height: 4px;
+  background-color: #FFD600;
+  margin-bottom: 50px;
+  border-radius: 2px;
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 120px;
+    opacity: 1;
+  }
+}
+
+/* Layout of profiles */
+.lab-circles {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.lab-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.lab-photo {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 10px solid #f8f8f8;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.lab-photo:hover {
+  transform: scale(1.05);
+}
+
+.lab-bubble {
+  background-color: #fff8f8;
+  border-radius: 100px;
+  padding: 22px 35px;
+  text-align: center;
+  margin-top: -40px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: relative;
+}
+
+.lab-bubble h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #0d3b66;
+}
+
+.lab-bubble p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .computer-lab-heading {
+    font-size: 2rem;
+  }
+
+  .lab-photo {
+    width: 240px;
+    height: 240px;
+  }
+
+  .lab-bubble {
+    padding: 18px 28px;
+    margin-top: -30px;
+  }
+
+  .lab-bubble h3 {
+    font-size: 1.1rem;
+  }
+
+  .lab-bubble p {
+    font-size: 0.95rem;
+  }
+}

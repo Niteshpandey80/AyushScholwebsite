@@ -1,12 +1,14 @@
 import React from 'react';
 import './Page2.css';
-import img1 from '../../assets/bro.jpg';
+import img1 from '../../assets/Sir.jpg'
 import img2 from '../../assets/bro1.jpg';
 import img3 from '../../assets/bro2.jpg';
 import img4 from '../../assets/bro3.jpg';
+import img5 from '../../assets/schoolacti.jpg'
+
 
 const Page2 = () => {
-  const images = [img1, img2, img3, img4];
+  const images = [ img1,img2, img3, img4 , img5];
 
   return (
     <div className='page2'>

@@ -1,5 +1,7 @@
 import React from 'react';
 import './Contact.css';
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -27,12 +29,23 @@ const Contact = () => {
           <h2>Follow Us</h2>
           <p>
             <a
-              href="https://www.instagram.com/mssb_483770?igsh=cnJhNDlzcTFscnQw"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Instagram
-            </a>
+            href="https://www.instagram.com/mssb_483770?igsh=cnJhNDlzcTFscnQw"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
+                        >
+              <FaInstagram />
+               Instagram
+                   </a>
+                     <a
+            href="https://www.facebook.com/share/1BLTFf6nYC/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: 'flex', alignItems: 'center', gap: '8px' , marginTop:'15px' }}
+                        >
+              <FaFacebook />
+               Facebook
+                   </a>
           </p>
         </div>
       </div>

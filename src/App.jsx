@@ -5,6 +5,9 @@ import Page1 from './components/Page1/Page1';
 import Footer from './components/Footer/Footer'
 import Page2 from './components/Page2/Page2';
 import Contact from './components/Contact/Contact';
+import Introduction from './components/Introduction/Introduction';
+import ComputerLab from './components/ComputerLab/ComputerLab';
+
 
 const App = () => {
   return (
@@ -12,6 +15,8 @@ const App = () => {
       <Nav />
       <Main />
       <Page1 />
+      <ComputerLab/>
+      <Introduction/>
       <Page2/>
       <Contact/>
       <Footer/>
