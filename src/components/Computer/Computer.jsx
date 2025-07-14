@@ -1,7 +1,7 @@
 import React from 'react'
 import img1 from '../../assets/compp.jpg';
 import img2 from '../../assets/complab.jpg';
-import playg from '../../assets/playground.jpg';
+import playg from '../../assets/activity.jpg';
 import './Computer.css';
 
 const Computer = () => {

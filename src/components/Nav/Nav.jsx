@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Nav.css';
-import logo from '../../assets/Logo.png';
+import logo from '../../assets/aaush.png';
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);

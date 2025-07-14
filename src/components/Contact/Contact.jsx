@@ -19,11 +19,13 @@ const Contact = () => {
           <p>KG1 to 8th with Primary</p>
 
           <h2>Location</h2>
-          <p>Ward No. 8, Bahri, District: Katni, Madhya Pradesh</p>
+          <p>WR29+F73, Barhi Station Rd, Barhi, Madhya Pradesh</p>
           <p>Pincode: 483770</p>
 
           <h2>Contact</h2>
-          <p>Mobile: <a href="tel:+918359871057">+91 83598 71057</a></p>
+          <p>Mobile No : <a href="tel:+918359871057">+91 83598 71057</a></p>
+          <p>Mobile No: <a href="tel:+918817446165">+91 8817446165</a></p>
+
           <p>Email: <a href="mailto:rambhajanrajpallallu@gmail.com">rambhajanrajpallallu@gmail.com</a></p>
 
           <h2>Follow Us</h2>
